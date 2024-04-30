@@ -1,43 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <!-- <style>
-        .container {
-            margin: auto;
-            width: 50%;
-            padding: 30px;
-            text-align: center;
-            /* margin-top: 30px; */
-            background: whitesmoke;
-        }
-    </style> -->
+    <title> Home Page</title>
 </head>
-
 <body>
-    <div class="bg-gray-200 w-1/2 p-4 flex flex-col justify-center items-center space-y-3 mx-auto mt-4">
-        <h1 class="text-2xl font-bold" data-th-text="${name}">Welcome To Home Page</h1>
-        <p class="text-xl text-gray-700">Github Repo Link: <span data-th-text="${githubRepo}"></span></p>
-        <a data-th-href="${githubRepo}">Click here to open</a>
-
-        <p class="text-gray-600">lorem ipsum dolor lore lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor,
-            sit amet consectetur
-            adipisicing elit. Praesentium dignissimos cumque, quia natus optio unde. Dolore illum quaerat itaque. Labore
-            quod a earum eum hic! Aspernatur voluptas consectetur suscipit. Animi!</p>
-
-        <div>
-            <button class="px-3 py-3 rounded bg-blue-700 text-white hover:bg-blue-600">Click Here</button>
-        </div>
+    <div id="content">
+        <h1>Welcome to About Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vel et eum deleniti at quo fugiat sed expedita sunt eaque architecto dolores dolor autem, sequi necessitatibus, consequuntur officiis. Eligendi!</p>
     </div>
-    
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        console.log("Home Page");
+    </script>
 </body>
-
 </html>

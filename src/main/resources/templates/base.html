@@ -1,9 +1,43 @@
-<div class="parent-fragment" th:fragment="parent(content)">
-    <h1>This is Parent Fragment</h1>
-    <p>lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque inventore voluptatem iusto, suscipit sit obcaecati recusandae cumque accusantium doloribus. Consequatur cum quas repellendus iste perferendis eveniet quasi est molestiae!</p>
-    <div th:replace="${content}"></div>
-</div>
+<!DOCTYPE html>
+<html lang="en" th:fragment="parent(content, title, script)" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <title data-th-replace="${title}">SCM</title>
+</head>
+<body>
+    <!-- common header -->
+    <ul class="p-4">
+        <li>
+            <a data-th-href="@{'/home'}">Home</a>
+        </li>
+        <li>
+            <a data-th-href="@{'/about'}">About</a>
+        </li>
+        <li>
+            <a data-th-href="@{'/services'}">Services</a>
+        </li>
+    </ul>
 
-<div th:fragment="test(content)">
-    <div th:replace="${content}"></div>
-</div>
+    <!-- Main Content -->
+    <div class="p-4">
+        <section data-th-replace="${content}"></section>
+    </div>
+
+    <!-- flow bite content -->
+
+    <!-- common footer -->
+    <footer class="p-4">
+        Footer: Learn Code
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+    <th:block data-th-replace="${script}"></th:block>
+
+</body>
+</html>
