@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="parent(content, title, script)" xmlns:th="http://www.thymeleaf.org">
+<html class="dark" lang="en" th:fragment="parent(content, title, script)" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +8,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <title data-th-replace="${title}">SCM</title>
 </head>
-<body>
+<body class="dark:bg-gray-900 dark:text-white">
     <!-- common header -->
-    <ul class="p-4">
-        <li>
-            <a data-th-href="@{'/home'}">Home</a>
-        </li>
-        <li>
-            <a data-th-href="@{'/about'}">About</a>
-        </li>
-        <li>
-            <a data-th-href="@{'/services'}">Services</a>
-        </li>
-    </ul>
+    <div data-th-replace="navbar :: navbar"> </div>
 
     <!-- Main Content -->
     <div class="p-4">
