@@ -7,11 +7,16 @@
         </a>
         <!-- end of brand logo -->
         <div class="flex gap-2 md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <!-- dark light theme button -->
+            <button id="theme_change_button" class="bg-gray-200 px-3 py-2 rounded-lg dark:bg-gray-600">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+                <span>Light</span>
+            </button>
             <a data-th-href="@{'/login'}" type="button"
-                class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Login</a>
+                class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</a>
                 
             <a data-th-href="@{'/register'}" type="button"
-                class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Signup</a>
+                class="text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Signup</a>
             
             <!-- mobile menu button -->
             <button data-collapse-toggle="navbar-cta" type="button"
