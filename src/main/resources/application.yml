@@ -1,7 +1,3 @@
-# spring.application.name=SCM
-# server.port = 8081
-
-#mysql dtaabase configuration
 spring:
     datasource:
         url: jdbc:mysql://localhost:3306/scm
@@ -10,12 +6,11 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
     jpa:
         hibernate:
-            ddl-auto: update             #for creating schemas and tables
+            ddl-auto: update     #for creating schemas and tables
         show-sql: true
 
 logging:
-  level:
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    level:
+        org.hibernate.SQL: debug
+        org.hibernate.type.descriptor.sql.BasicBinder: TRACE
 
-#email configuration
