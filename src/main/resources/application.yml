@@ -9,8 +9,17 @@ spring:
             ddl-auto: update     #for creating schemas and tables
         show-sql: true
 
+#Security configuratiom
+
+    # security:
+    #     user:
+    #         name: durgesh
+    #         password: durgesh
+
+
+
+
 logging:
     level:
         org.hibernate.SQL: debug
         org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-
