@@ -9,12 +9,22 @@ spring:
             ddl-auto: update     #for creating schemas and tables
         show-sql: true
 
-#Security configuratiom
-
-    # security:
-    #     user:
-    #         name: durgesh
-    #         password: durgesh
+    #Security configuratiom
+    #OAuth2 client configuration
+    #google configure
+    security:
+        oauth2:
+            client:
+                registration:
+                    google:
+                        client-name: google
+                        client-id: 1030606503848-u52uje88ppfe3dc5ts0orih6fp74jelb.apps.googleusercontent.com
+                        client-secret: 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
+                        scope:
+                            - email
+                            - profile
+                
+    
 
 
 
@@ -23,3 +33,6 @@ logging:
     level:
         org.hibernate.SQL: debug
         org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+
+
