@@ -18,8 +18,18 @@ spring:
                 registration:
                     google:
                         client-name: google
-                        client-id: 1030606503848-u52uje88ppfe3dc5ts0orih6fp74jelb.apps.googleusercontent.com
-                        client-secret: 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
+                        provider: google
+                        client-id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        client-secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        scope:
+                            - email
+                            - profile
+                    
+                    github:
+                        client-name: github
+                        provider: github
+                        client-id: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                        client-secret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                         scope:
                             - email
                             - profile
