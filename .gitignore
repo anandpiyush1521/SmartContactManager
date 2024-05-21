@@ -34,3 +34,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Ignore application profiles
+/src/main/resources/application-dev.yml
+/src/main/resources/application-prod.yml
