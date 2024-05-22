@@ -64,7 +64,7 @@ public class PageController {
         System.out.println("Login Page Loading");
         return "login";
     }
-    //signup page
+    //registration page
     @RequestMapping("/register")
     public String signupPage(Model model){
         UserForm userForm = new UserForm();
