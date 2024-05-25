@@ -35,9 +35,6 @@ build/
 ### VS Code ###
 .vscode/
 
-### node modules ###
-node_modules/
-
 
 # Ignore application profiles
 /src/main/resources/application-dev.yml
