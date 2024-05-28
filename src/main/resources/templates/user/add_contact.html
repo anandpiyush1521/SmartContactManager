@@ -23,7 +23,13 @@
                             This contact will be stored on cloud, You can directly email this client from scm...
                         </p>
 
-                        <form action="" class="mt-8">
+                        <form 
+                            action="" 
+                            class="mt-8"
+                            data-th-action="@{'/user/contacts/add'}"
+                            data-th-object="${contactForm}"
+                            method="post"
+                        >
                             <!-- name form -->
                             <div class="mb-3">
                                 <label for="input-group-1"
@@ -36,7 +42,9 @@
                                         <i class="fa-regular w-4 h-4 fa-user"></i>
 
                                     </div>
-                                    <input type="text" id="input-group-1"
+                                    <input
+                                        data-th-field="*{name}" 
+                                        type="text" 
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="name">
                                 </div>
@@ -54,7 +62,9 @@
                                         <i class="fa-regular w-4 h-4 fa-envelope"></i>
 
                                     </div>
-                                    <input type="text" id="input-group-1"
+                                    <input 
+                                        data-th-field="*{email}"
+                                        type="text" 
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="example@gmail.com">
                                 </div>
@@ -71,7 +81,9 @@
                                         <i class="fa-solid h-4 w-4 fa-phone-volume"></i>
 
                                     </div>
-                                    <input type="text" id="input-group-1"
+                                    <input 
+                                        data-th-field="*{phoneNumber}"
+                                        type="text" 
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         placeholder="9876543210">
                                 </div>
@@ -82,7 +94,9 @@
                                 <label for="message"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact
                                     Address</label>
-                                <textarea id="message" rows="4"
+                                <textarea 
+                                    data-th-field="*{address}" 
+                                    rows="4"
                                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Enter Your Address..."></textarea>
                             </div>
@@ -92,7 +106,9 @@
                                 <label for="message"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact
                                     Description</label>
-                                <textarea id="message" rows="4"
+                                <textarea 
+                                    data-th-field="*{description}" 
+                                    rows="4"
                                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     placeholder="Write about your contact..."></textarea>
                             </div>
@@ -110,7 +126,9 @@
                                                 <i class="fa-solid h-4 w-4 fa-earth-americas"></i>
 
                                             </div>
-                                            <input type="text" id="input-group-1"
+                                            <input 
+                                                data-th-field="*{websiteLink}"
+                                                type="text" 
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="https://example.com">
                                         </div>
@@ -127,7 +145,9 @@
                                                 <i class="fa-brands h-4 w-4 fa-linkedin"></i>
 
                                             </div>
-                                            <input type="text" id="input-group-1"
+                                            <input 
+                                                data-th-field="*{linkedInLink}"
+                                                type="text" 
                                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                                 placeholder="https://www.linkedin.com">
                                         </div>
@@ -147,7 +167,9 @@
 
                             <!-- favorite checkbox: contact is favorite or not -->
                             <div class="flex items-center mb-3">
-                                <input id="default-checkbox" type="checkbox" value=""
+                                <input 
+                                    data-th-field="*{favorite}" 
+                                    type="checkbox"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="default-checkbox"
                                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Is this contact is
