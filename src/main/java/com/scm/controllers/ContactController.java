@@ -26,6 +26,8 @@ import com.scm.services.UserService;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
+import java.util.*;
+
 
 @Controller
 @RequestMapping("/user/contacts")
@@ -113,5 +115,23 @@ public class ContactController {
             .type(MessageType.green)
             .build());
         return "redirect:/user/contacts/add";
+    }
+
+    //view contacts
+
+    @RequestMapping
+    public String viewContacts(Model model ,Authentication authentication){
+
+        //load all the user contacts
+
+        String username = Helper.getEmailOfLoggedInUser(authentication);
+
+        User user = userService.getUserByEmail(username);
+
+        List<Contact> contacts = contactService.getByUser(user);
+
+        model.addAttribute("contacts", contacts);
+
+        return "user/contacts";
     }
 }
