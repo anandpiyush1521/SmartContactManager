@@ -5,6 +5,8 @@ import com.scm.entities.User;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 public interface ContactService {
     //save contacts
     Contact save(Contact contact);
@@ -27,5 +29,5 @@ public interface ContactService {
     //get contact by userid
     List<Contact> getByUserId(String userId);
 
-    List<Contact> getByUser(User user);
+    Page<Contact> getByUser(User user, int page, int size, String sortBy, String direction);
 }
