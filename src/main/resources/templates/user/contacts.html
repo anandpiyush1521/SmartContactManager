@@ -22,6 +22,9 @@
                 </p>
                 <div class="contacts_container p-5">
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                        
+                        <div data-th-replace="~{message :: messagebox}"></div>
+
                         <form data-th-object="${contactSearchForm}" action="" data-th-action="@{'/user/contacts/search'}">
                             <div
                                 class="flex space-x-3 p-5 items-center justify-start flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white dark:bg-gray-900">
@@ -120,12 +123,21 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         <div>
-                                            <a href="">
+                                            <!-- <a data-th-href="@{'/user/contacts/delete/'+*{id}}">
                                                 <i class="fa-solid fa-trash w-6 h-6"></i>
-                                            </a>
-                                            <a href="">
+                                            </a> -->
+
+                                            <!-- delete contact -->
+                                            <button th:onclick="deleteContact([[${c.id}]])">
+                                                <i class="fa-solid fa-trash w-6 h-6"></i>
+                                            </button>
+
+                                            <!-- update contact -->
+                                            <a data-th-href="@{'/user/contacts/view/'+*{id}}">
                                                 <i class="fa-solid fa-pen w-6 h-6"></i>
                                             </a>
+
+                                            <!-- view contact -->
                                             <button  
                                                 th:onclick="loadContactData([[${c.id}]])"
                                             >

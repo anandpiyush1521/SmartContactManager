@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
 <head>
-    <title> Home Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Home Page</title>
 </head>
-<body>
-    <div id="content">
-        <h1>Welcome to About Page</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vel et eum deleniti at quo fugiat sed expedita sunt eaque architecto dolores dolor autem, sequi necessitatibus, consequuntur officiis. Eligendi!</p>
+
+<body class="bg-gray-100 ">
+    <div id="content" class="min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 dark:text-gray-200">Welcome to Smart Contact Manager</h1>
+        <p class="text-lg text-gray-600 mb-8 text-center px-4 sm:px-0 dark:text-gray-400">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vel et eum deleniti at quo fugiat sed expedita sunt eaque architecto dolores dolor autem, sequi necessitatibus, consequuntur officiis. Eligendi!
+        </p>
+        <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+            <a href="/user/contacts" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+                <i class="fas fa-address-book mr-2"></i> Manage Contacts
+            </a>
+            <a href="/user/upload" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition">
+                <i class="fas fa-cloud-upload-alt mr-2"></i> Upload Contacts
+            </a>
+            <a href="/user/profile" class="px-6 py-3 bg-yellow-600 text-white rounded-lg shadow-md hover:bg-yellow-700 transition">
+                <i class="fas fa-user mr-2"></i> My Profile
+            </a>
+        </div>
+        <div class="mt-12 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 dark:text-gray-400">Features</h2>
+            <ul class="text-lg text-gray-600 space-y-2">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Securely store your contacts in the cloud</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Access your contacts from anywhere</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Easily manage and organize your contact list</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Upload contact images to Cloudinary</li>
+            </ul>
+        </div>
     </div>
     <script>
         console.log("Home Page");
     </script>
 </body>
+
 </html>
