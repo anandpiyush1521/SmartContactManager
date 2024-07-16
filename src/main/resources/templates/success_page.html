@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Home Page</title>
+</head>
+
+<body class="bg-gray-100 ">
+    <div id="content" class="min-h-screen flex flex-col items-center justify-center">
+
+        <h1 data-th-replace="message::messagebox" class="text-4xl font-bold text-gray-800 mb-6 dark:text-gray-200">
+           
+        </h1>
+
+        <!-- <div data-th-replace="message::messagebox"></div> -->
+
+        <div class="mt-8">
+            <a href="/login" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition">
+                <i class="fas fa-sign-in-alt mr-2"></i> Login
+            </a>
+        </div>
+       
+        <div class="mt-12 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 dark:text-gray-400">Features</h2>
+            <ul class="text-lg text-gray-600 space-y-2">
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Securely store your contacts in the cloud</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Access your contacts from anywhere</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Easily manage and organize your contact list</li>
+                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Upload contact images to Cloudinary</li>
+            </ul>
+        </div>
+        
+    </div>
+    <script>
+        console.log("Home Page");
+    </script>
+</body>
+
+</html>
