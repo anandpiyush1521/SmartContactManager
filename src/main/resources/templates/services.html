@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
 <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <title>Service Page</title>
 </head>
-<body>
-    <section id="content">
-        <h1>Welcome to services page</h1>
-        <h2>Services Offered by SCM</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus distinctio minima quaerat reiciendis incidunt illo asperiores est molestiae quidem voluptates recusandae corrupti iste rem nihil, obcaecati eveniet sit, in fuga.</p>
+
+<body class="bg-gray-100">
+    <section id="content" class="min-h-screen flex flex-col items-center justify-center py-12 px-4">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 dark:text-gray-200">Welcome to Services Page</h1>
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4 dark:text-gray-300">Services Offered by SCM</h2>
+        
+        <div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <!-- Service 1 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-cloud-upload-alt text-3xl text-blue-600 mr-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Cloud Storage</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 flex-grow">
+                    Store your contacts securely in the cloud with automatic backups and synchronization across all your devices.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-search text-3xl text-green-600 mr-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Smart Search</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 flex-grow">
+                    Find contacts instantly with our powerful search function that looks through names, emails, phone numbers, and even notes.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-tags text-3xl text-yellow-600 mr-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Custom Categories</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 flex-grow">
+                    Organize contacts with custom categories and tags to quickly filter and find the people you need.
+                </p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-lock text-3xl text-red-600 mr-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Privacy Protection</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 flex-grow">
+                    Your contact data is encrypted and protected with industry-standard security measures to ensure privacy.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-10 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+            <a href="/" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+                <i class="fas fa-home mr-2"></i> Back to Home
+            </a>
+            <a href="/pricing" class="px-6 py-3 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 transition">
+                <i class="fas fa-tag mr-2"></i> View Pricing
+            </a>
+        </div>
     </section>
+    
     <script>
         console.log("Services page")
     </script>
 </body>
+
 </html>

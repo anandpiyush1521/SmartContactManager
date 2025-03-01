@@ -1,18 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
 <head>
-    <title> About Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>About Page</title>
 </head>
-<body>
-    <div id="content">
-        <h1>Welcome to About Page</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vel et eum deleniti at quo fugiat sed expedita sunt eaque architecto dolores dolor autem, sequi necessitatibus, consequuntur officiis. Eligendi!</p>
+
+<body class="bg-gray-100">
+    <div id="content" class="min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 dark:text-gray-200">Welcome to About Page</h1>
+        <p class="text-lg text-gray-600 mb-8 text-center px-4 sm:px-0 dark:text-gray-400">
+            Smart Contact Manager is your personal solution for organizing and accessing your contacts securely from anywhere.
+        </p>
+        
+        <div class="mt-12 w-full max-w-3xl">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 dark:text-gray-400">About Smart Contact Manager</h2>
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                    Smart Contact Manager helps you store and organize your contacts in one secure location. With our cloud-based platform, you can access your contact information from any device, at any time.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">
+                    Our goal is to simplify contact management while ensuring your data remains private and protected.
+                </p>
+                <div class="flex items-center mt-6">
+                    <i class="fas fa-envelope text-blue-600 mr-3 text-xl"></i>
+                    <span class="text-gray-700 dark:text-gray-300">support@smartcontactmanager.com</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row">
+            <a href="/" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+                <i class="fas fa-home mr-2"></i> Back to Home
+            </a>
+            <a href="/contact-us" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-md hover:bg-green-700 transition">
+                <i class="fas fa-paper-plane mr-2"></i> Contact Us
+            </a>
+        </div>
     </div>
+    
     <script>
         console.log("About Page");
     </script>
     <script>
-        console.log("Second about page script")
+        console.log("Second about page script");
     </script>
 </body>
+
 </html>

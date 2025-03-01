@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+
 <head>
-    <title> Contact</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Contact</title>
 </head>
-<body>
-    <div id="content">
-        <h1>Welcome to Contact Page</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vel et eum deleniti at quo fugiat sed expedita sunt eaque architecto dolores dolor autem, sequi necessitatibus, consequuntur officiis. Eligendi!</p>
+
+<body class="bg-gray-100">
+    <div id="content" class="min-h-screen flex flex-col items-center justify-center py-12 px-4">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 dark:text-gray-200">Welcome to Contact Page</h1>
+        <p class="text-lg text-gray-600 mb-8 text-center max-w-3xl dark:text-gray-400">
+            Have questions or feedback about Smart Contact Manager? We're here to help! Feel free to reach out to our team using the form below.
+        </p>
+
+        <div class="w-full max-w-2xl bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col">
+                        <label for="name" class="text-gray-700 dark:text-gray-300 mb-2 font-medium">Your Name</label>
+                        <input type="text" id="name" name="name" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="flex flex-col">
+                        <label for="email" class="text-gray-700 dark:text-gray-300 mb-2 font-medium">Email Address</label>
+                        <input type="email" id="email" name="email" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="johndoe@example.com">
+                    </div>
+                </div>
+                
+                <div class="flex flex-col">
+                    <label for="subject" class="text-gray-700 dark:text-gray-300 mb-2 font-medium">Subject</label>
+                    <input type="text" id="subject" name="subject" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="How can we help you?">
+                </div>
+                
+                <div class="flex flex-col">
+                    <label for="message" class="text-gray-700 dark:text-gray-300 mb-2 font-medium">Message</label>
+                    <textarea id="message" name="message" rows="4" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white" placeholder="Type your message here..."></textarea>
+                </div>
+                
+                <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition">
+                    <i class="fas fa-paper-plane mr-2"></i> Send Message
+                </button>
+            </form>
+        </div>
+
+        <div class="mt-10 w-full max-w-2xl grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                <i class="fas fa-map-marker-alt text-3xl text-blue-600 mb-4"></i>
+                <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">Our Location</h3>
+                <p class="text-gray-600 dark:text-gray-400">123 SCM Street, Tech City, 12345</p>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                <i class="fas fa-envelope text-3xl text-green-600 mb-4"></i>
+                <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">Email Us</h3>
+                <p class="text-gray-600 dark:text-gray-400">support@smartcontactmanager.com</p>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+                <i class="fas fa-phone-alt text-3xl text-yellow-600 mb-4"></i>
+                <h3 class="text-lg font-medium text-gray-800 dark:text-gray-200 mb-2">Call Us</h3>
+                <p class="text-gray-600 dark:text-gray-400">(123) 456-7890</p>
+            </div>
+        </div>
     </div>
+    
     <script>
         console.log("Contact Page");
     </script>
 </body>
+
 </html>
